@@ -1,0 +1,15 @@
+<div class="container">
+    <form class="hex" [formGroup]="registerForm" (submit)="register($event)">
+            <h1>HEX Register</h1>
+            <div class="inputs">
+                <div class="form-inputs mr-1">
+                    <input type="text" formGroup="name" id="first_name" required>
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="form-inputs">
+                    <input type="text" formGroup="lastName" id="last_name" required>
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+        </form>
+  </div>

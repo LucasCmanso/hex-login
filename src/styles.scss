@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1900px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+      max-width: 1920px;
+    }
+  }
+body {
+    margin: 0;
+}
+
+.form-inputs {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-inputs input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-inputs input:focus, 
+.form-inputs input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-inputs label {
+    top: 15px;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+
+.form-inputs{
+    &:focus-within {
+        label {
+            transform: translateY(-125%);
+            font-size: .75em;
+        }
+    }
+}
+
